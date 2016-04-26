@@ -4,12 +4,12 @@
  * Tit: Grado Ingeniería Informática - Universidad de La Laguna
  * Course: 3 - Computación
  * Subject: Programación de aplicaciones interactivas.
- * Practice: 9
- * Class/Program: Random Walk
+ * Practice: 10
+ * Class/Program: QuickHull
  * File: GUI.java
- * Description: This is a program that reproduce the two dimension random walk.
+ * Description: This is a program that use the quickhull algorithm to calculate the comvex hull .
  * @author Rubén Labrador Páez
- * @version 1.0.0 18/04/2016
+ * @version 1.0.0 25/04/2016
  **/
 
 package gui;
@@ -17,29 +17,26 @@ package gui;
 import java.awt.BorderLayout;
 import java.awt.Dimension;
 import java.awt.Toolkit;
+import javax.swing.JApplet;
 
-import javax.swing.JFrame;
-
-public class GUI extends JFrame {
-  protected JFrame frame = new JFrame();
+//Basic JApplet class
+public class GUI extends JApplet {
   protected GraphPanel graphPanel;
 
-  GUI() {
-    graphPanel = new GraphPanel();
-    frame.setLayout(new BorderLayout());
-    frame.setTitle("Quickhull");
-    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-    frame.add(graphPanel, BorderLayout.CENTER);
-    Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
-    frame.setSize(screenSize);
-    frame.setVisible(true);
+  public void init(int points){
+    graphPanel = new GraphPanel(points);
+    setLayout(new BorderLayout());
+    add(graphPanel, BorderLayout.CENTER);
+    Dimension screenSize = new Dimension (600,300);
+    //Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+    setSize(screenSize);
+    setVisible(true);
   }
 
-  public JFrame getFrame() {
-    return frame;
-  }
-  
   public GraphPanel getGraphPanel() {
     return graphPanel;
   }
 }
+
+
+

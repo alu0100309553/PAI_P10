@@ -1,0 +1,18 @@
+<html>
+<head>
+<title>Running a Program as an Applet and as an Application</title>
+</head>
+<body>
+This applet gets a message from the HTML page and displays it.
+<p>
+<applet
+  code = "ControlPanel.class"
+  width = 400
+  height = 250
+  alt="You must have a Java 2-enabled browser to view the applet"
+>
+<param name=points value=120>
+<param name=velocity value=10>
+</applet>
+</body>
+</html>
