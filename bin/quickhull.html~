@@ -6,7 +6,7 @@
 QuickHull Applet.
 <p>
 <applet
-  code = "ControlPanel"
+  code = "bin.ControlPanel"
   width = 400
   height = 250
   alt="You must have a Java 2-enabled browser to view the applet"

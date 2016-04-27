@@ -1,12 +1,12 @@
 <html>
 <head>
-<title>QuickHull</title>
+<title>Running a Program as an Applet and as an Application</title>
 </head>
 <body>
-QuickHull Applet.
+This applet gets a message from the HTML page and displays it.
 <p>
 <applet
-  code = "ControlPanel"
+  code = "ControlPanel.class"
   width = 400
   height = 250
   alt="You must have a Java 2-enabled browser to view the applet"

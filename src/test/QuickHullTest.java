@@ -22,7 +22,6 @@ import gui.ControlPanel;
 
 public class QuickHullTest {
   private FrameFixture frame;
-  private ControlPanel window = new ControlPanel();
   
   @Before
   public void initialize() {
@@ -33,27 +32,27 @@ public class QuickHullTest {
 
   @Test
   public void testInic() {
-    frame.maximize();
-    frame.button("inic").click();
+    //frame.maximize();
+    //frame.button("inic_").click();
     
   }
  
   @Test
   public void testEjec() {
-    frame.focus();
-    frame.button("ejec").click();
+    //frame.focus();
+    //frame.button("ejec_").click();
   }
   
   @Test
   public void testPaso() {
-    frame.focus();
-    frame.button("paso").click();
+    //frame.focus();
+    //frame.button("paso_").click();
   }
   
   @Test
   public void testPausa() {
-    frame.focus();
-    frame.button("pausa").click();
+    //frame.focus();
+    frame.button("inic_").click();
   }
   
   /*

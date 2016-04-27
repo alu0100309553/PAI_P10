@@ -33,7 +33,7 @@ public class ControlPanel extends GUI {
   private JButton paso = new JButton("Paso");
   private boolean isStandAlone = false;
   private int points = 100;
-  private int velocity = 10;
+  private int speed = 10;
   private Timer timer; 
   private final Dimension BTDIM = new Dimension(120, 30);
   private final int DEF_TIME = 1000;
@@ -65,12 +65,12 @@ public class ControlPanel extends GUI {
     // Reading arguments for applet use
     if (!isStandAlone){
       points = Integer.parseInt(getParameter("points"));
-      velocity = Integer.parseInt(getParameter("velocity"));
+      speed = Integer.parseInt(getParameter("speed"));
     }
     super.init(points);
     
     // Setting period time
-    int time = DEF_TIME/velocity;
+    int time = DEF_TIME/speed;
     timer = new Timer(time, new MyActionListener());
     
     // Panel for controls
@@ -90,10 +90,10 @@ public class ControlPanel extends GUI {
     pausa.setPreferredSize(BTDIM);
     
     // Setting names to BDD
-    inic.setName("inic");
-    ejec.setName("ejec");
-    paso.setName("paso");
-    pausa.setName("pausa");
+    inic.setName("inic_");
+    ejec.setName("ejec_");
+    paso.setName("paso_");
+    pausa.setName("pausa_");
 
     // Setting panel layout
     opPanel.setLayout(new FlowLayout(FlowLayout.CENTER));
@@ -147,7 +147,7 @@ public class ControlPanel extends GUI {
       ControlPanel window = new ControlPanel();
       //window.win = new JFrame();
       window.points = Integer.parseInt(args[0]);
-      window.velocity = Integer.parseInt(args[1]);
+      window.speed = Integer.parseInt(args[1]);
       window.isStandAlone = true;
       win.add(window,BorderLayout.CENTER);
       window.init();
@@ -160,7 +160,7 @@ public class ControlPanel extends GUI {
       win.setVisible(true);
     }
     else {
-      System.err.println("No arguments or argument wrong: try java -jar quickhull.jar <number_of_points>  <velocity>");
+      System.err.println("No arguments or argument wrong: try java -jar quickhull.jar <number_of_points>  <speed>");
     }
   }
 

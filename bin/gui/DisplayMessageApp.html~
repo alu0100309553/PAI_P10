@@ -6,13 +6,14 @@
 This applet gets a message from the HTML page and displays it.
 <p>
 <applet
-  code = "ControlPanel.class"
+  code = "DisplayMessageApp.class"
   width = 400
   height = 250
   alt="You must have a Java 2-enabled browser to view the applet"
 >
-<param name=points value=120>
-<param name=velocity value=10>
+<param name=MESSAGE value="Esto es un Applet en PAI">
+<param name=X value=120>
+<param name=Y value=130>
 </applet>
 </body>
 </html>
